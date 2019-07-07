@@ -31,13 +31,18 @@ public class productoService {
   @WebMethod(operationName="updateProducto")   
   public @WebResult(name="Rtdo")producto updateProducto(@WebParam(name="nombretoupdate")String s, @WebParam(name="idtoupdate")int i, @WebParam(name="cantidadtoupdate")int in, @WebParam(name="preciotoupdate")double d){
     productoRepository pr = new productoRepository();
-    producto p = pr.getProducto(i);
-    pr.delProducto(i);
+    List<producto> lp = pr.getListaProducto();
+    producto p1 = new producto();
+    for (producto p: lp){
+    if(p.getId()==i)
+    {
     p.setNombre(s);
     p.setCantidad(in);
     p.setPrecio(d);
-    pr.setProducto(p);
     return p;
+    }
+    }
+    return p1;
     }
  
   @WebMethod(operationName="deleteProducto")   
