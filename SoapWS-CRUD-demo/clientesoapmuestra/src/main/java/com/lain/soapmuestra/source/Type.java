@@ -114,11 +114,4 @@ public class Type {
         this.precio = value;
     }
 
-    @Override
-    public String toString() {
-        return "{" + "nombre=" + nombre + ", cantidad=" + cantidad + ", id=" + id + ", precio=" + precio + '}';
-    }
-
-    
-    
 }

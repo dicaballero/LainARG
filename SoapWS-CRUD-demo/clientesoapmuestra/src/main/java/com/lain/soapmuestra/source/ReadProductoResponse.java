@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Rtdo" type="{http://source.SoapMuestra.lain.com/}type" minOccurs="0"/>
+ *         &lt;element name="Rtdo" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,17 +33,17 @@ import javax.xml.bind.annotation.XmlType;
 public class ReadProductoResponse {
 
     @XmlElement(name = "Rtdo")
-    protected Type rtdo;
+    protected Object rtdo;
 
     /**
      * Obtiene el valor de la propiedad rtdo.
      * 
      * @return
      *     possible object is
-     *     {@link Type }
+     *     {@link Object }
      *     
      */
-    public Type getRtdo() {
+    public Object getRtdo() {
         return rtdo;
     }
 
@@ -52,10 +52,10 @@ public class ReadProductoResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link Type }
+     *     {@link Object }
      *     
      */
-    public void setRtdo(Type value) {
+    public void setRtdo(Object value) {
         this.rtdo = value;
     }
 

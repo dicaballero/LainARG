@@ -10,60 +10,33 @@ import javax.jws.soap.SOAPBinding;
 public class productoService {
     
  @WebMethod(operationName="createProducto")   
-  public @WebResult(name="Rtdo")producto createProducto(@WebParam(name="nombre")String s, @WebParam(name="id")int i, @WebParam(name="cantidad")int in, @WebParam(name="precio")double d){
-    productoRepository pr = new productoRepository();
-    producto p = new producto();
-    p.setNombre(s);
-    p.setId(i);
-    p.setCantidad(in);
-    p.setPrecio(d);
-    pr.setProducto(p);
-    return p;
-    }
+  public @WebResult(name="Rtdo")Object createProducto(@WebParam(name="nombre")String s, @WebParam(name="id")int i, @WebParam(name="cantidad")int ii, @WebParam(name="precio")double d){
+    return productoRepository.createProducto(s, i, ii, d);
+ }
   
   @WebMethod(operationName="readProducto")   
-  public @WebResult(name="Rtdo")producto readProducto(@WebParam(name="serviceparam")int i){
-     productoRepository pr = new productoRepository();
-     producto p = pr.getProducto(i);
-     return p;
-     }
+  public @WebResult(name="Rtdo")Object readProducto(@WebParam(name="serviceparam")int i){
+    return productoRepository.readProducto(i);
+    }
      
   @WebMethod(operationName="updateProducto")   
-  public @WebResult(name="Rtdo")producto updateProducto(@WebParam(name="nombretoupdate")String s, @WebParam(name="idtoupdate")int i, @WebParam(name="cantidadtoupdate")int in, @WebParam(name="preciotoupdate")double d){
-    productoRepository pr = new productoRepository();
-    List<producto> lp = pr.getListaProducto();
-    producto p1 = new producto();
-    for (producto p: lp){
-    if(p.getId()==i)
-    {
-    p.setNombre(s);
-    p.setCantidad(in);
-    p.setPrecio(d);
-    return p;
-    }
-    }
-    return p1;
+  public @WebResult(name="Rtdo")Object updateProducto(@WebParam(name="nombretoupdate")String s, @WebParam(name="idtoupdate")int i, @WebParam(name="cantidadtoupdate")int ii, @WebParam(name="preciotoupdate")double d){
+    return productoRepository.updateProducto(s, i, ii, d);
     }
  
   @WebMethod(operationName="deleteProducto")   
-  public @WebResult(name="Rtdo")producto deleteProducto(@WebParam(name="serviceparam")int i){
-     productoRepository pr = new productoRepository();
-     producto p = pr.getProducto(i);
-     pr.delProducto(i);
-     return p;
-     }
+  public @WebResult(name="Rtdo")Object deleteProducto(@WebParam(name="serviceparam")int i){
+    return productoRepository.deleteProducto(i);
+    }
   
    @WebMethod(operationName="getListaProducto")   
-   public @WebResult(name="Rtdo")List<producto> getListaProducto(){
-     productoRepository pr = new productoRepository();
-     return pr.getListaProducto();
+   public @WebResult(name="Rtdo")Object getListaProducto(){
+     return productoRepository.getListaProducto();
      }
     
     @WebMethod(operationName="clearListaProducto")   
-    public @WebResult(name="Rtdo")String clearListaProducto(){
-     productoRepository pr = new productoRepository();
-     pr.clearListaProducto();
-     return "repositorio borrado";
+    public @WebResult(name="Rtdo")Object clearListaProducto(){
+     return productoRepository.clearListaProducto();
      }
  
 }

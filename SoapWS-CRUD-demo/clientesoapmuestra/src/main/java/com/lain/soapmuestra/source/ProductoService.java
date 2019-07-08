@@ -1,7 +1,6 @@
 
 package com.lain.soapmuestra.source;
 
-import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -32,14 +31,14 @@ public interface ProductoService {
      * @param cantidad
      * @param nombre
      * @return
-     *     returns com.lain.soapmuestra.source.Type
+     *     returns java.lang.Object
      */
     @WebMethod
     @WebResult(name = "Rtdo", targetNamespace = "")
     @RequestWrapper(localName = "createProducto", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.CreateProducto")
     @ResponseWrapper(localName = "createProductoResponse", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.CreateProductoResponse")
     @Action(input = "http://source.SoapMuestra.lain.com/productoService/createProductoRequest", output = "http://source.SoapMuestra.lain.com/productoService/createProductoResponse")
-    public Type createProducto(
+    public Object createProducto(
         @WebParam(name = "nombre", targetNamespace = "")
         String nombre,
         @WebParam(name = "id", targetNamespace = "")
@@ -53,14 +52,14 @@ public interface ProductoService {
      * 
      * @param serviceparam
      * @return
-     *     returns com.lain.soapmuestra.source.Type
+     *     returns java.lang.Object
      */
     @WebMethod
     @WebResult(name = "Rtdo", targetNamespace = "")
     @RequestWrapper(localName = "readProducto", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.ReadProducto")
     @ResponseWrapper(localName = "readProductoResponse", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.ReadProductoResponse")
     @Action(input = "http://source.SoapMuestra.lain.com/productoService/readProductoRequest", output = "http://source.SoapMuestra.lain.com/productoService/readProductoResponse")
-    public Type readProducto(
+    public Object readProducto(
         @WebParam(name = "serviceparam", targetNamespace = "")
         int serviceparam);
 
@@ -71,14 +70,14 @@ public interface ProductoService {
      * @param idtoupdate
      * @param preciotoupdate
      * @return
-     *     returns com.lain.soapmuestra.source.Type
+     *     returns java.lang.Object
      */
     @WebMethod
     @WebResult(name = "Rtdo", targetNamespace = "")
     @RequestWrapper(localName = "updateProducto", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.UpdateProducto")
     @ResponseWrapper(localName = "updateProductoResponse", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.UpdateProductoResponse")
     @Action(input = "http://source.SoapMuestra.lain.com/productoService/updateProductoRequest", output = "http://source.SoapMuestra.lain.com/productoService/updateProductoResponse")
-    public Type updateProducto(
+    public Object updateProducto(
         @WebParam(name = "nombretoupdate", targetNamespace = "")
         String nombretoupdate,
         @WebParam(name = "idtoupdate", targetNamespace = "")
@@ -92,39 +91,39 @@ public interface ProductoService {
      * 
      * @param serviceparam
      * @return
-     *     returns com.lain.soapmuestra.source.Type
+     *     returns java.lang.Object
      */
     @WebMethod
     @WebResult(name = "Rtdo", targetNamespace = "")
     @RequestWrapper(localName = "deleteProducto", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.DeleteProducto")
     @ResponseWrapper(localName = "deleteProductoResponse", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.DeleteProductoResponse")
     @Action(input = "http://source.SoapMuestra.lain.com/productoService/deleteProductoRequest", output = "http://source.SoapMuestra.lain.com/productoService/deleteProductoResponse")
-    public Type deleteProducto(
+    public Object deleteProducto(
         @WebParam(name = "serviceparam", targetNamespace = "")
         int serviceparam);
 
     /**
      * 
      * @return
-     *     returns java.util.List<com.lain.soapmuestra.source.Type>
+     *     returns java.lang.Object
      */
     @WebMethod
     @WebResult(name = "Rtdo", targetNamespace = "")
     @RequestWrapper(localName = "getListaProducto", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.GetListaProducto")
     @ResponseWrapper(localName = "getListaProductoResponse", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.GetListaProductoResponse")
     @Action(input = "http://source.SoapMuestra.lain.com/productoService/getListaProductoRequest", output = "http://source.SoapMuestra.lain.com/productoService/getListaProductoResponse")
-    public List<Type> getListaProducto();
+    public Object getListaProducto();
 
     /**
      * 
      * @return
-     *     returns java.lang.String
+     *     returns java.lang.Object
      */
     @WebMethod
     @WebResult(name = "Rtdo", targetNamespace = "")
     @RequestWrapper(localName = "clearListaProducto", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.ClearListaProducto")
     @ResponseWrapper(localName = "clearListaProductoResponse", targetNamespace = "http://source.SoapMuestra.lain.com/", className = "com.lain.soapmuestra.source.ClearListaProductoResponse")
     @Action(input = "http://source.SoapMuestra.lain.com/productoService/clearListaProductoRequest", output = "http://source.SoapMuestra.lain.com/productoService/clearListaProductoResponse")
-    public String clearListaProducto();
+    public Object clearListaProducto();
 
 }

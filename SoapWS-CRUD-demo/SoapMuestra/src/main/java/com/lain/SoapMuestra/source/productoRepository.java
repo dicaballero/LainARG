@@ -10,25 +10,58 @@ public class productoRepository {
 
  
     public productoRepository() {}
-
-    public producto getProducto(int i) {
-        return listaProducto.get(i);
+    
+    public static Object createProducto(String s, int i, int ii, double d) {
+        producto p = new producto();
+        p.setNombre(s);
+        p.setId(i);
+        p.setCantidad(ii);
+        p.setPrecio(d);
+        listaProducto.add(p);
+        return "Create producto: "+p;
     }
-
-    public void setProducto(producto p) {
-        this.listaProducto.add(p);
+     
+    public static Object readProducto(int i) {
+        for(producto p:listaProducto){
+        if(p.getId()==i){
+        return "Read producto: "+p; 
+        } 
+        }
+        return "El producto con id="+i+", no fue encontrado";
+    }
+ 
+    public static Object deleteProducto(int i) {
+        int index=-1;
+        for(producto p:listaProducto){
+        index++;
+        if(p.getId()==i){
+        listaProducto.remove(index);
+        return "Delete producto: "+p; 
+        }
+        
+    }
+        return "El producto con id="+i+", no fue encontrado";
     }
     
-    public void delProducto(int i) {
-        this.listaProducto.remove(i);
+    public static Object updateProducto(String s, int i, int ii, double d){
+        for(producto p:listaProducto){
+        if(p.getId()==i){
+        p.setNombre(s);
+        p.setCantidad(ii);
+        p.setPrecio(d);
+        return "Update producto: "+p;
+        }
+        }
+        return "El producto con id="+i+", no fue encontrado";
     }
     
-    public List<producto> getListaProducto() {
-        return listaProducto;
+    public static Object getListaProducto() {
+        return "Contenido del repositorio: "+listaProducto;
     }
     
-    public void clearListaProducto(){
+    public static Object clearListaProducto(){
     listaProducto.clear();
+    return "Repositorio formateado";
     }
     
     

@@ -24,19 +24,18 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Producto_QNAME = new QName("http://source.SoapMuestra.lain.com/", "producto");
-    private final static QName _DeleteProducto_QNAME = new QName("http://source.SoapMuestra.lain.com/", "deleteProducto");
-    private final static QName _ReadProductoResponse_QNAME = new QName("http://source.SoapMuestra.lain.com/", "readProductoResponse");
-    private final static QName _ClearListaProductoResponse_QNAME = new QName("http://source.SoapMuestra.lain.com/", "clearListaProductoResponse");
-    private final static QName _UpdateProducto_QNAME = new QName("http://source.SoapMuestra.lain.com/", "updateProducto");
     private final static QName _ReadProducto_QNAME = new QName("http://source.SoapMuestra.lain.com/", "readProducto");
     private final static QName _CreateProductoResponse_QNAME = new QName("http://source.SoapMuestra.lain.com/", "createProductoResponse");
+    private final static QName _DeleteProducto_QNAME = new QName("http://source.SoapMuestra.lain.com/", "deleteProducto");
     private final static QName _GetListaProducto_QNAME = new QName("http://source.SoapMuestra.lain.com/", "getListaProducto");
     private final static QName _CreateProducto_QNAME = new QName("http://source.SoapMuestra.lain.com/", "createProducto");
     private final static QName _ClearListaProducto_QNAME = new QName("http://source.SoapMuestra.lain.com/", "clearListaProducto");
     private final static QName _UpdateProductoResponse_QNAME = new QName("http://source.SoapMuestra.lain.com/", "updateProductoResponse");
+    private final static QName _ReadProductoResponse_QNAME = new QName("http://source.SoapMuestra.lain.com/", "readProductoResponse");
+    private final static QName _ClearListaProductoResponse_QNAME = new QName("http://source.SoapMuestra.lain.com/", "clearListaProductoResponse");
     private final static QName _DeleteProductoResponse_QNAME = new QName("http://source.SoapMuestra.lain.com/", "deleteProductoResponse");
     private final static QName _GetListaProductoResponse_QNAME = new QName("http://source.SoapMuestra.lain.com/", "getListaProductoResponse");
+    private final static QName _UpdateProducto_QNAME = new QName("http://source.SoapMuestra.lain.com/", "updateProducto");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.lain.soapmuestra.source
@@ -62,30 +61,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReadProductoResponse }
-     * 
-     */
-    public ReadProductoResponse createReadProductoResponse() {
-        return new ReadProductoResponse();
-    }
-
-    /**
-     * Create an instance of {@link DeleteProducto }
-     * 
-     */
-    public DeleteProducto createDeleteProducto() {
-        return new DeleteProducto();
-    }
-
-    /**
-     * Create an instance of {@link Type }
-     * 
-     */
-    public Type createType() {
-        return new Type();
-    }
-
-    /**
      * Create an instance of {@link DeleteProductoResponse }
      * 
      */
@@ -99,6 +74,14 @@ public class ObjectFactory {
      */
     public GetListaProductoResponse createGetListaProductoResponse() {
         return new GetListaProductoResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadProductoResponse }
+     * 
+     */
+    public ReadProductoResponse createReadProductoResponse() {
+        return new ReadProductoResponse();
     }
 
     /**
@@ -126,6 +109,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DeleteProducto }
+     * 
+     */
+    public DeleteProducto createDeleteProducto() {
+        return new DeleteProducto();
+    }
+
+    /**
      * Create an instance of {@link GetListaProducto }
      * 
      */
@@ -150,51 +141,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Type }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "producto")
-    public JAXBElement<Type> createProducto(Type value) {
-        return new JAXBElement<Type>(_Producto_QNAME, Type.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteProducto }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "deleteProducto")
-    public JAXBElement<DeleteProducto> createDeleteProducto(DeleteProducto value) {
-        return new JAXBElement<DeleteProducto>(_DeleteProducto_QNAME, DeleteProducto.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReadProductoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "readProductoResponse")
-    public JAXBElement<ReadProductoResponse> createReadProductoResponse(ReadProductoResponse value) {
-        return new JAXBElement<ReadProductoResponse>(_ReadProductoResponse_QNAME, ReadProductoResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ClearListaProductoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "clearListaProductoResponse")
-    public JAXBElement<ClearListaProductoResponse> createClearListaProductoResponse(ClearListaProductoResponse value) {
-        return new JAXBElement<ClearListaProductoResponse>(_ClearListaProductoResponse_QNAME, ClearListaProductoResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateProducto }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "updateProducto")
-    public JAXBElement<UpdateProducto> createUpdateProducto(UpdateProducto value) {
-        return new JAXBElement<UpdateProducto>(_UpdateProducto_QNAME, UpdateProducto.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReadProducto }{@code >}}
      * 
      */
@@ -210,6 +156,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "createProductoResponse")
     public JAXBElement<CreateProductoResponse> createCreateProductoResponse(CreateProductoResponse value) {
         return new JAXBElement<CreateProductoResponse>(_CreateProductoResponse_QNAME, CreateProductoResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteProducto }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "deleteProducto")
+    public JAXBElement<DeleteProducto> createDeleteProducto(DeleteProducto value) {
+        return new JAXBElement<DeleteProducto>(_DeleteProducto_QNAME, DeleteProducto.class, null, value);
     }
 
     /**
@@ -249,6 +204,24 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadProductoResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "readProductoResponse")
+    public JAXBElement<ReadProductoResponse> createReadProductoResponse(ReadProductoResponse value) {
+        return new JAXBElement<ReadProductoResponse>(_ReadProductoResponse_QNAME, ReadProductoResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ClearListaProductoResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "clearListaProductoResponse")
+    public JAXBElement<ClearListaProductoResponse> createClearListaProductoResponse(ClearListaProductoResponse value) {
+        return new JAXBElement<ClearListaProductoResponse>(_ClearListaProductoResponse_QNAME, ClearListaProductoResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DeleteProductoResponse }{@code >}}
      * 
      */
@@ -264,6 +237,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "getListaProductoResponse")
     public JAXBElement<GetListaProductoResponse> createGetListaProductoResponse(GetListaProductoResponse value) {
         return new JAXBElement<GetListaProductoResponse>(_GetListaProductoResponse_QNAME, GetListaProductoResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateProducto }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://source.SoapMuestra.lain.com/", name = "updateProducto")
+    public JAXBElement<UpdateProducto> createUpdateProducto(UpdateProducto value) {
+        return new JAXBElement<UpdateProducto>(_UpdateProducto_QNAME, UpdateProducto.class, null, value);
     }
 
 }
