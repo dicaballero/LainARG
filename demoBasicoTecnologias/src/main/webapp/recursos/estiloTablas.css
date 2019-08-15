@@ -1,0 +1,15 @@
+a{
+    color:red;
+}
+
+table {
+  color:white;
+  border: 1px solid;
+  border-collapse: collapse;  
+  table-layout: fixed ;
+  width: 100% ;
+}
+
+td {
+  width: 25% ;
+}
