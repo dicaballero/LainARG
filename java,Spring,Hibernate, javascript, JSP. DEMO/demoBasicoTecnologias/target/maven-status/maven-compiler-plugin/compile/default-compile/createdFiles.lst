@@ -1,0 +1,5 @@
+DAL\Producto.class
+DAL\sessionManager.class
+DAL\DAO.class
+Controller\controlador2.class
+Controller\controlador1.class
