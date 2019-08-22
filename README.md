@@ -11,4 +11,8 @@ La tercer carpeta contiene una WEB application que también realiza CRUD+2, util
 que solo se precisa contar con un gestor mysql activo para poder hacer uso del programa.     
 
 La cuarta carpeta contendrá un programa front, basado en javascript y angular JS, la idea básicamente es
-llamar a un servicio de tipo API, como amazon o mercadolibre y realizar un demostrativo en el proceso. 
+llamar a un servicio de tipo API, como amazon o mercadolibre y realizar un demostrativo en el proceso.
+
+La quinta carpeta contendrá un proyecto Spring-JPA/Hibernate, que haga uso de la inyección de dependencias. 
+
+La sexta carpeta contendrá un proyecto java 8 desktop, algo sencillo, un reloj, una calculadora o similar.
