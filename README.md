@@ -1,5 +1,5 @@
 # LainARG
-Repositorio demostrativo Java, WS, JS,angularJS, Spring, Hibernate.
+Repositorio demostrativo Java 8, javaWS, JavaScript, JSP,angularJS, Spring, Hibernate, html,css.
 
 Hola! gracias por spotear mi repositorio público. 
 
