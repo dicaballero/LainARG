@@ -14,6 +14,6 @@ La cuarta carpeta contendrá un programa front, basado en javascript y angular J
 llamar a un servicio de tipo API, como amazon o mercadolibre y realizar un demostrativo en el proceso.
 
 La quinta carpeta contendrá un proyecto Spring-JPA/Hibernate, que haga uso de la inyección de dependencias
-y del model nativo de Spring, aspectos ignorados en el primer proyecto. 
+y del model propio de Spring, aspectos ignorados en el primer proyecto. 
 
 La sexta carpeta contendrá un proyecto java 8 desktop, algo sencillo, un reloj, una calculadora o similar.
