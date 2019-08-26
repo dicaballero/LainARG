@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class DAO{
     
     public static Object registrar(String nombre, String marca, String precio, String cantidad, String codigoIdentificador){
